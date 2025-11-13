@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
-import { Code2, FlaskConical, BarChart3, Brain, Dna } from "lucide-react";
+import { Sprout, BarChart3, Leaf, CloudSun, Droplet } from "lucide-react";
 
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -8,101 +8,98 @@ import { Badge } from "@/components/ui/badge";
 const projectsData = [
   {
     id: 1,
-    icon: Dna,
-    title: "DNA Sequence Analyzer",
-    tags: ["Streamlit", "Biopython", "Python"],
+    icon: Sprout,
+    title: "AI-Based Crop Recommendation System",
+    tags: ["Python", "Scikit-Learn", "Streamlit"],
     overview:
-      "Analyzes DNA sequences instantly, showing nucleotide counts, GC content, complement, and reverse complement.",
+      "Recommends the most suitable crop for a given region using soil, rainfall, and climate data.",
     problem:
-      "Manual DNA analysis or heavy software is slow; this tool makes it fast and accessible via a web interface.",
+      "Farmers often rely on experience rather than data, leading to inefficient crop selection and reduced yield.",
     implementation: [
-      "Interactive interface with Streamlit",
-      "Sequence processing with Biopython",
-      "Supports plain DNA or FASTA input",
-      "Calculates length, GC content, and nucleotide composition",
-      "Generates complement and reverse complement sequences",
+      "Collected open soil and weather datasets",
+      "Trained classification model using Scikit-Learn",
+      "Built web interface with Streamlit for crop suggestions",
+      "Visualized predictions and confidence scores",
     ],
     impact:
-      "Enables beginners to quickly test and visualize DNA features without installing complex tools.",
+      "Helps farmers make data-driven decisions for higher yield and efficient land utilization.",
     color: "from-green-500 to-emerald-600",
   },
   {
     id: 2,
-    icon: FlaskConical,
-    title: "Protein Sequence Similarity Checker",
-    tags: ["Biopython", "Streamlit", "Algorithms"],
+    icon: BarChart3,
+    title: "Crop Yield Prediction using Machine Learning",
+    tags: ["Python", "Pandas", "Scikit-Learn", "Plotly"],
     overview:
-      "Compares two protein sequences and calculates alignment scores and similarity.",
+      "Predicts expected crop yield using rainfall, fertilizer usage, and cultivation area data.",
     problem:
-      "Protein comparison tools are often complex; this provides a simple web-based solution.",
+      "Accurate yield forecasting is essential for planning and food supply stability.",
     implementation: [
-      "Sequence alignment using Biopython pairwise2",
-      "Simple Streamlit interface for input",
-      "Displays aligned sequences with similarity scores",
-      "Supports global and local alignment algorithms",
+      "Used historical agricultural datasets",
+      "Applied regression models for yield prediction",
+      "Visualized yield trends with Plotly charts",
+      "Built an interactive dashboard for exploration",
     ],
     impact:
-      "Helps users visualize protein similarity quickly without heavy bioinformatics tools.",
-    color: "from-blue-500 to-cyan-600",
+      "Enables early yield estimation and supports agricultural decision-making.",
+    color: "from-amber-500 to-yellow-600",
   },
   {
     id: 3,
-    icon: BarChart3,
-    title: "Gene Expression Data Visualizer",
-    tags: ["Python", "Pandas", "Seaborn", "Matplotlib"],
+    icon: Leaf,
+    title: "Crop Disease Detection using Deep Learning",
+    tags: ["TensorFlow", "Keras", "Flask"],
     overview:
-      "Visualizes gene expression datasets using heatmaps, PCA, and clustering.",
+      "Identifies plant leaf diseases using a CNN model trained on image datasets.",
     problem:
-      "Raw gene expression data is hard to interpret; visualizations make patterns clear.",
+      "Manual crop disease diagnosis is time-consuming and often inaccurate.",
     implementation: [
-      "Built with Python, Pandas, Seaborn, Matplotlib",
-      "CSV input with genes as rows",
-      "Generates heatmaps and PCA plots",
-      "Supports data inspection and summaries",
+      "Trained CNN model using PlantVillage dataset",
+      "Preprocessed images for consistent accuracy",
+      "Developed Flask web app for real-time predictions",
+      "Displayed confidence and suggested treatments",
     ],
     impact:
-      "Simplifies exploration of biological datasets and highlights expression patterns quickly.",
-    color: "from-purple-500 to-pink-600",
+      "Allows farmers to detect crop diseases early and take quick preventive action.",
+    color: "from-red-500 to-rose-600",
   },
   {
     id: 4,
-    icon: Brain,
-    title: "Protein Secondary Structure Predictor (AI)",
-    tags: ["TensorFlow", "LSTM", "Neural Networks"],
+    icon: CloudSun,
+    title: "Climate-Aware Crop Planning Dashboard",
+    tags: ["Python", "Prophet", "Plotly", "Streamlit"],
     overview:
-      "Predicts protein secondary structures (Helix, Sheet, Coil) from amino acid sequences using AI.",
+      "Analyzes weather patterns and forecasts suitable planting periods for major crops.",
     problem:
-      "Experimental structure determination is slow; AI predicts structures computationally.",
+      "Climate variability causes uncertainty in planting schedules and yield outcomes.",
     implementation: [
-      "Used sequence-structure datasets",
-      "Preprocessed sequences numerically",
-      "Built a Bidirectional LSTM in TensorFlow",
-      "Predicted structure labels for residues",
-      "Evaluated accuracy with a test set",
+      "Collected multi-year weather and yield data",
+      "Applied Prophet model for seasonal forecasting",
+      "Created visual insights with Plotly charts",
+      "Built interactive dashboard for climate-smart planning",
     ],
     impact:
-      "Shows AI’s role in structural biology and end-to-end bioinformatics pipelines.",
-    color: "from-orange-500 to-red-600",
+      "Helps optimize crop schedules and reduce losses due to weather fluctuations.",
+    color: "from-sky-500 to-blue-600",
   },
   {
     id: 5,
-    icon: Code2,
-    title: "DNA Mutation Effect Predictor (ML)",
-    tags: ["Scikit-Learn", "Random Forest", "ClinVar"],
+    icon: Droplet,
+    title: "AI-Driven Smart Fertilizer Management System",
+    tags: ["Python", "Scikit-Learn", "Flask"],
     overview:
-      "Predicts whether DNA mutations are benign or pathogenic using machine learning.",
+      "Predicts ideal fertilizer type and quantity based on soil nutrients and crop type.",
     problem:
-      "Experimental testing of mutations is costly; ML provides faster insights.",
+      "Overuse of fertilizers harms soil health and increases farming costs.",
     implementation: [
-      "Collected annotated mutations from ClinVar and Kaggle",
-      "Encoded mutation features for ML",
-      "Trained Random Forest classifier",
-      "Cross-validation for accuracy",
-      "Displayed feature importance",
+      "Used open soil nutrient datasets",
+      "Trained Random Forest model for fertilizer recommendations",
+      "Developed simple Flask interface for farmers",
+      "Displayed predictions and sustainability metrics",
     ],
     impact:
-      "Connects AI with genomics to predict disease-related variants computationally.",
-    color: "from-indigo-500 to-violet-600",
+      "Supports sustainable farming by optimizing fertilizer usage through AI insights.",
+    color: "from-lime-500 to-green-600",
   },
 ];
 

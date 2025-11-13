@@ -1,6 +1,7 @@
 import { useTranslation } from "react-i18next";
-import { Mail, Github, Linkedin, Phone } from "lucide-react";
+import { Mail, Github, Linkedin, Phone, Paperclip } from "lucide-react";
 
+import resume from "@/assets/resume.pdf";
 import { Button } from "@/components/ui/button";
 
 const Hero = () => {
@@ -45,7 +46,7 @@ const Hero = () => {
             </Button>
             <Button asChild variant="outline" size="lg" className="gap-2">
               <a
-                href="https://github.com/Bi0-AI"
+                href="https://github.com/im-ahamad"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -55,12 +56,18 @@ const Hero = () => {
             </Button>
             <Button asChild variant="outline" size="lg" className="gap-2">
               <a
-                href="https://linkedin.com/in/ahamad-ullah-5427212b2"
+                href="https://linkedin.com/in/im-ahamad"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <Linkedin className="h-5 w-5" />
                 {t("hero.linkedin")}
+              </a>
+            </Button>
+            <Button asChild variant="outline" size="lg" className="gap-2">
+              <a href={resume} target="_blank" rel="noopener noreferrer">
+                <Paperclip className="h-5 w-5" />
+                CV
               </a>
             </Button>
           </div>
